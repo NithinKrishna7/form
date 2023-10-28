@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT Event Registration</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="top-bar">
+        <img src="https://vtop.vit.ac.in/vtop/assets/img/VITLogoEmblem.png" alt="">
+        <h1>VIT</h1>
+        <p>(Vellore Campus)</p>
+    </div>
+
+    <div class="container">
+        <img src="https://ww2.freelogovectors.net/wp-content/uploads/2023/01/vitlogo-freelogovectors.net_.png?lossy=1&ssl=1" height="110" width="200" >
+        <h2>VIT EVENT REGISTRATION</h2>
+        <div class="form-container">
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" required  placeholder="Enter your First Name">
+                    <span class="error" id="firstNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" required placeholder="Enter your Last Name">
+                    <span class="error" id="lastNameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required placeholder="Enter your VIT Email">
+                    <span class="error" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required placeholder="Enter your Password">
+                    <span class="error" id="passwordError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="zipCode">Zip Code:</label>
+                    <input type="text" id="zipCode" required pattern="[0-9]{5}" placeholder="Enter the 5 Digit Zip Code">
+                    <span class="error" id="zipCodeError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="mobileNumber">Mobile Number:</label>
+                    <input type="tel" id="mobileNumber" required pattern="[0-9]{10}" placeholder="Enter 10 Digit Mobile Number">
+                    <span class="error" id="mobileNumberError"></span>
+                </div>
+
+                <button type="button" onclick="validateForm()">Submit</button>
+            </form>
+
+            <div id="errorMessages" class="error"></div>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+
+</html>
